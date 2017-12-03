@@ -1,0 +1,19 @@
+1. Path of BCLOAD.EXE
+C:\Program Files (x86)\BasicCardV8
+
+2. Right-click card project and under output files make sure .img is selected.
+
+3. Compile card program and get the .IMG file from project folder.
+
+4. Put BCLoad copy and Img file into the same folder.
+
+5. Plug in the RFID reader and find its com port.
+
+6. Per experience the RFID reader will map itself to COM port 102 and 103. I theorize that one of them is the contact reader in the Omnikey device
+and the other is the RFID reader in the Omnikey device. (103 seems to be the RFID port)
+
+7. Use CMD to run the load command with params:
+-> CD  >PATH<
+-> BCLoad BitcoinCard.img -E -STest -P103
+
+8. The error file will appear in the folder you put the two files and no paths will be needed.

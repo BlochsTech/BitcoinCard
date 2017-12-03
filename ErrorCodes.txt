@@ -1,0 +1,18 @@
+0: No error.
+1: Undefined/unknown/should never happen error, contact manufacturer.
+2: Wrong command order.
+3: Data/Command/String/Index too long/out of bounds.
+4: Wrong TX format version.
+5: Invalid amount (BOBC supports polling the card for its max charge before charging it, larger purchases have to be split up).
+6: Invalid address.
+7: Not enough funds or card needs to be updated with TX sources.
+8: Card has not been unlocked (it is "free" to check by calling delayunlock, it if card is already unlocked!) (No PIN amounts do not require time unlocking)
+9: Card has no space for new sources, use or dump existing sources./Not enough storage.
+10: Does not contain expected data. Unspent TX out may not be owned by the card or script is not standard.
+11: Source is already known or spent.
+12: Device does not accept data, may have own connection and/or enough data. (Mostly useful for non-card BOBC implementing devices.)
+13: Not enough difficulty, block header sent should have a difficulty of at least 1/10.000 of cards average figure. (UNUSED ERROR)
+14: Decimals value not supported (BOBC-0/protocol=0 cards usually expect 8).
+15: Card must be reset with a zero charge + pin to charge higher amounts or card is already waiting for a reset pin, before it can be charged again.
+16: ECpDSA library error, contact manufacturer.
+17: Charged amount is below the dust limit.
